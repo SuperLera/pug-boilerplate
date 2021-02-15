@@ -1,0 +1,13 @@
+header.header
+  .container
+    a.logo(href='#')
+    .search
+      form.search__form
+        input.search__input(name='' placeholder='Search' type='text')
+        input.search__submit(name='' value='Send' type='submit')
+    .socials
+      ul.socials__list
+        each social in [{title: "vk", link: "https://vk.com"}, {title: "fb", link: "https://www.facebook.com"}]
+          li.socials__item
+            a(class=`socials__link socials__link--${social.title}` href=`${social.link}`)
+              img.socials__link-pic(src='' alt='')

@@ -1,0 +1,28 @@
+include ./sections/_mixins
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+
+    block title
+      title Главная страница
+  body
+    .wrapper
+      .maincontent
+
+        include ./sections/header
+        +nav('nav', ["Главная", "Новости", "О компании", "Сравнение"], 0)
+        include ./sections/breadcrumbs
+
+        .article
+          .container
+
+            include ./sections/sidebar
+
+            .content
+              .section-title Контентная часть
+              .content__desc
+                block content
+    include ./sections/footer
